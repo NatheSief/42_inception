@@ -1,4 +1,4 @@
-FROM debian:buster
+FROM debian:bookworm
 
 RUN apt-get update && apt-get -y install \
 	wget \
@@ -24,7 +24,7 @@ RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli
 COPY ./conf/www.conf /etc/php/7.3/fpm/pool.d/
 
 #Create the folder to enable php start
-RUN mkdir /run/php
+RUN mkdir -p /run/php
 
 #we copy the script, give the right to launch it in local on our computer
 COPY ./tools/create_wordpress.sh /usr/local/bin/
