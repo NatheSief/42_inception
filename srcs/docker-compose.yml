@@ -75,13 +75,13 @@ volumes:
     driver: local
     driver_opts:
       type: none
-      device: /home/vbachele/data/mysql
+      device: /home/nsiefert/data/mysql
       o: bind
   wordpress_data:
     driver: local
     driver_opts:
       type: none
-      device: /home/vbachele/data/wordpress
+      device: /home/nsiefert/data/wordpress
       o: bind
 
 networks:
